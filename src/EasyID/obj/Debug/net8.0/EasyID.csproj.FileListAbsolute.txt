@@ -1,0 +1,11 @@
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/bin/Debug/net8.0/EasyID.deps.json
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/bin/Debug/net8.0/EasyID.dll
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/bin/Debug/net8.0/EasyID.pdb
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/obj/Debug/net8.0/EasyID.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/obj/Debug/net8.0/EasyID.AssemblyInfoInputs.cache
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/obj/Debug/net8.0/EasyID.AssemblyInfo.cs
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/obj/Debug/net8.0/EasyID.csproj.CoreCompileInputs.cache
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/obj/Debug/net8.0/EasyID.dll
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/obj/Debug/net8.0/refint/EasyID.dll
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/obj/Debug/net8.0/EasyID.pdb
+/Users/nbt-mingyi/mingyi.wu/easyid/sdk/dotnet/src/EasyID/obj/Debug/net8.0/ref/EasyID.dll
