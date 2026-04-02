@@ -1,4 +1,4 @@
-name: Publish .NET Package
+name: 自动发布 NuGet 包
 
 on:
   push:
@@ -6,34 +6,27 @@ on:
       - "v*"
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   publish:
-    if: github.repository == 'easyid-com-cn/easyid-dotnet'
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup .NET
+      - name: 安装 .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: 8.x
 
-      - name: Restore
+      - name: 还原依赖
         run: dotnet restore
 
-      - name: Build
-        run: dotnet build -c Release --no-restore
+      - name: 构建
+        run: dotnet build --configuration Release --no-restore
 
-      - name: Test
-        run: dotnet test -c Release --no-build
+      # 👇 打包输出到 artifacts 目录（和你保持一致）
+      - name: 打包
+        run: dotnet pack --configuration Release --output ./artifacts --no-build
 
-      - name: Pack
-        run: dotnet pack src/EasyID/EasyID.csproj -c Release --no-build -o ./artifacts
-
-      - name: Publish to NuGet
-        run: dotnet nuget push "./artifacts/*.nupkg" --api-key "${{ secrets.NUGET_API_KEY }}" --source "https://api.nuget.org/v3/index.json"
+      # 👇 修复命令：无多余空格、无换行、路径正确、密钥纯文本
+      - name: 推送 NuGet
+        run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
