@@ -2,7 +2,7 @@ namespace EasyID;
 
 public sealed class EasyIDClient
 {
-    private static readonly System.Text.RegularExpressions.Regex KeyIdRegex = new("^ak_[0-9a-f]+$", System.Text.RegularExpressions.RegexOptions.Compiled);
+    private static readonly System.Text.RegularExpressions.Regex KeyIdRegex = new("^ak_[0-9a-zA-Z_]+$", System.Text.RegularExpressions.RegexOptions.Compiled);
 
     public IDCardApi IdCard { get; }
     public PhoneApi Phone { get; }
